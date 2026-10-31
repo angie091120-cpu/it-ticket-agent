@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "it-tickets": {
+      "command": "uv",
+      "args": ["run", "--directory", "mcp", "python", "-m", "ticket_mcp.server"],
+      "env": {
+        "TICKET_API_URL": "http://localhost:8787"
+      }
+    }
+  }
+}

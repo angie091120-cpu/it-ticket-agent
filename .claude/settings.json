@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__it-tickets__list_tickets",
+      "mcp__it-tickets__create_ticket",
+      "mcp__it-tickets__triage_ticket",
+      "mcp__it-tickets__close_ticket"
+    ],
+    "deny": [
+      "WebFetch",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(http:*)",
+      "Bash(python -c:*)",
+      "Bash(python3 -c:*)",
+      "Bash(node -e:*)"
+    ]
+  }
+}

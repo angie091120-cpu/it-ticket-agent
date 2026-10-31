@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "it-ticket-agent",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "it-ticket-agent",
+      "database_id": "6ba7b6c7-49a0-4ee8-b43d-f36870943cfb",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Reseed the public demo every day at 03:00 Taiwan time (19:00 UTC).
+  "triggers": { "crons": ["0 19 * * *"] },
+  // sql/funnel.sql is imported as text so /api/stats runs the exact same queries as the file.
+  "rules": [{ "type": "Text", "globs": ["**/*.sql"], "fallthrough": true }]
+}

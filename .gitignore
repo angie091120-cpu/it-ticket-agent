@@ -1,0 +1,17 @@
+node_modules/
+.wrangler/
+.seed/
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# Python (mcp/)
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Local Claude Code / keys
+.claude/settings.local.json
+*.pem
